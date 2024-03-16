@@ -34,9 +34,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(655, 568);
+            BackColor = Color.FromArgb(20, 20, 20);
+            ClientSize = new Size(406, 478);
+            ForeColor = Color.White;
             Name = "Form1";
-            Text = "Form1";
+            Text = "NoLexa Setup";
             ResumeLayout(false);
         }
 
