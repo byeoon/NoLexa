@@ -1,0 +1,19 @@
+﻿name: Add Sponsors
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 30 15 * * 0-6
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2
+
+      - name: Add GitHub Sponsors to Readme
+        uses: JamesIves/github-sponsors-readme-action@v1.3.1
+        with:
+          token: ${{secrets.TOKEN}}
+          fallback: "No one has sponsored yet..."
+          file: "README.md"
