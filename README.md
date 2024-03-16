@@ -1,6 +1,6 @@
 ﻿<div align='center'>
-  
-![NoLexa large(1)](https://github.com/byeoon/NoLexa/assets/47872200/c172ec25-dc7b-4a93-beb4-64b6469a71df)
+
+![NoLexa Logo](https://github.com/byeoon/NoLexa/assets/47872200/a3ff2f7c-1705-44c4-a3a4-8714cbf5b352)
 
 **A multi-purpose tweaking tool to remove Amazon Alexa from your device for good.**
 </div>
