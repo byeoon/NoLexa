@@ -58,7 +58,7 @@ If you want to help contribute these are good resources to help you get started:
 # ❤ Support
 You may donate if this application has helped you, donating can help me develop better software for everyone to use, and it would be very appreciated. Even $1 makes a huge difference. These funds would go to better development of other projects and being able to support myself financially. 
 
-[Click here to go to my GitHub sponsor page!](https://github.com/sponsors/byeoon)!
+[Click here to go to my GitHub sponsor page](https://github.com/sponsors/byeoon)!
 
 
 ### 💙 Sponsors
@@ -79,10 +79,12 @@ I would like to personally thank my sponsors, you're all amazing!
    A: <b>Yes.</b> You can make optional donations which will go towards better funding of NoLexa, and upcoming projects.
 </details>
 
+
 <details>
 <summary>Q: Will NoLexa work on any Kindle Device?</summary>
    A: <b>Mostly.</b> There are some kindle devices that do not support NoLexa due to it being too old, or not having Alexa.
 </details>
+
 
 <details>
 <summary>Q: Will there be FireOS / FireTV support in the future?</summary>
