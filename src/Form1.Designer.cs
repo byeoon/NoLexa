@@ -163,6 +163,7 @@
             // 
             // btnDismiss
             // 
+            btnDismiss.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnDismiss.ForeColor = Color.Black;
             btnDismiss.Location = new Point(6, 70);
             btnDismiss.Name = "btnDismiss";
@@ -174,6 +175,7 @@
             // 
             // btnADBYes
             // 
+            btnADBYes.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnADBYes.ForeColor = Color.Black;
             btnADBYes.Location = new Point(134, 70);
             btnADBYes.Name = "btnADBYes";

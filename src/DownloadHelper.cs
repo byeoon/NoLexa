@@ -15,26 +15,6 @@ namespace NoLexa.src
     {
         static string downloadsPath = KnownFolders.GetPath(KnownFolder.Downloads);
 
-        public static void DownloadFiles(string url)
-        {
-            try
-            {
-                if (IsAdministrator() == false)
-                {
-                    MessageBox.Show("Unable to download from " + url + " Please restart as admin");
-                }
-                using (WebClient wc = new WebClient())
-                {
-                    wc.DownloadFile(url, downloadsPath); // downloads needs FUCKING admin perms.
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unable to download because of" + ex);
-
-            }
-        }
-
         public static void InstallADB()
         {
             if (IsAdministrator() == false)
@@ -43,31 +23,25 @@ namespace NoLexa.src
             }
             else
             {
-                if (Directory.Exists("C:\\Program Files (x86)\\android-sdk\\platform-tools"))
-                {
-                    {
-                        if (File.Exists("C:\\Program Files (x86)\\android-sdk\\platform-tools\\adb.exe"))
-                            MessageBox.Show("ADB exists in the correct directory and can be used.");
-                    }
-                }
-                else
-                {
                     if (!Directory.Exists("C:\\Program Files (x86)\\android-sdk\\platform-tools"))
                     {
+                        MessageBox.Show("ADB DOESNT     exists in the correct directory and can be used.");
                         Directory.CreateDirectory("C:\\Program Files (x86)\\android-sdk\\");
                         Directory.CreateDirectory("C:\\Program Files (x86)\\android-sdk\\platform-tools");
                     }
                     using (WebClient wc = new WebClient())
                     {
-                        wc.DownloadFileCompleted += Wc_DownloadFileCompleted;
+                        MessageBox.Show("ADB download.");
+                        wc.DownloadFileCompleted += new AsyncCompletedEventHandler(Wc_DownloadFileCompleted);
                         wc.DownloadFile("https://dl.google.com/android/repository/platform-tools-latest-windows.zip", @"C:\\Program Files (x86)\\android-sdk\\adb.zip");
-                        wc.Dispose();
+                        
+                      //  wc.Dispose();
                     }
-                }
             }
         }
 
-        private static void Wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e) {
+        static void Wc_DownloadFileCompleted(object? sender, AsyncCompletedEventArgs e) {
+            MessageBox.Show("annoying ass bullshit");
             UnzipADB(); 
         }
 
