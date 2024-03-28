@@ -25,18 +25,17 @@ namespace NoLexa.src
             {
                     if (!Directory.Exists("C:\\Program Files (x86)\\android-sdk\\platform-tools"))
                     {
-                        MessageBox.Show("ADB DOESNT     exists in the correct directory and can be used.");
                         Directory.CreateDirectory("C:\\Program Files (x86)\\android-sdk\\");
                         Directory.CreateDirectory("C:\\Program Files (x86)\\android-sdk\\platform-tools");
                     }
                     using (WebClient wc = new WebClient())
                     {
                         MessageBox.Show("ADB download.");
-                        wc.DownloadFileCompleted += new AsyncCompletedEventHandler(Wc_DownloadFileCompleted);
+                        wc.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadHelper.Wc_DownloadFileCompleted);
                         wc.DownloadFile("https://dl.google.com/android/repository/platform-tools-latest-windows.zip", @"C:\\Program Files (x86)\\android-sdk\\adb.zip");
-                        
-                      //  wc.Dispose();
-                    }
+                        wc.Dispose();
+                        UnzipADB(); // fuck you c#
+                }
             }
         }
 
