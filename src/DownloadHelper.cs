@@ -30,18 +30,12 @@ namespace NoLexa.src
                     }
                     using (WebClient wc = new WebClient())
                     {
-                        MessageBox.Show("ADB download.");
-                        wc.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadHelper.Wc_DownloadFileCompleted);
                         wc.DownloadFile("https://dl.google.com/android/repository/platform-tools-latest-windows.zip", @"C:\\Program Files (x86)\\android-sdk\\adb.zip");
                         wc.Dispose();
                         UnzipADB(); // fuck you c#
-                }
+                        MessageBox.Show("ADB has been downloaded successfully, please click the 'Refresh' button.", "NoLexa");
+                    }
             }
-        }
-
-        static void Wc_DownloadFileCompleted(object? sender, AsyncCompletedEventArgs e) {
-            MessageBox.Show("annoying ass bullshit");
-            UnzipADB(); 
         }
 
         private static void UnzipADB() {

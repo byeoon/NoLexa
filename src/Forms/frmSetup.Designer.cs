@@ -1,6 +1,6 @@
 ﻿namespace NoLexa
 {
-    partial class Form1
+    partial class frmSetup
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSetup));
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -146,6 +146,7 @@
             lblADBWarning.Size = new Size(203, 45);
             lblADBWarning.TabIndex = 9;
             lblADBWarning.Text = "ADB is not installed on your device! \r\nNoLexa can automatically install this \r\nfor you, do you want to do this?\r\n";
+            lblADBWarning.Visible = false;
             // 
             // groupBox1
             // 
@@ -160,6 +161,7 @@
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Alert!";
+            groupBox1.Visible = false;
             // 
             // btnDismiss
             // 
@@ -171,6 +173,7 @@
             btnDismiss.TabIndex = 11;
             btnDismiss.Text = "Dismiss";
             btnDismiss.UseVisualStyleBackColor = true;
+            btnDismiss.Visible = false;
             btnDismiss.Click += btnDismiss_Click;
             // 
             // btnADBYes
@@ -183,9 +186,10 @@
             btnADBYes.TabIndex = 10;
             btnADBYes.Text = "Yes";
             btnADBYes.UseVisualStyleBackColor = true;
+            btnADBYes.Visible = false;
             btnADBYes.Click += btnADBYes_Click;
             // 
-            // Form1
+            // frmSetup
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -201,7 +205,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             ForeColor = Color.White;
-            Name = "Form1";
+            Name = "frmSetup";
             Text = "NoLexa Setup";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);

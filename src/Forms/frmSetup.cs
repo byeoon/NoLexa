@@ -5,12 +5,11 @@ using System.Net;
 
 namespace NoLexa
 {
-    public partial class Form1 : Form
+    public partial class frmSetup : Form
     {
-        public Form1()
+        public frmSetup()
         {
             InitializeComponent();
-            AdbServer server = new AdbServer();
             ListDevices();
         }
 
@@ -28,10 +27,19 @@ namespace NoLexa
             }
             catch
             {
-                groupBox1.Visible = true;
-                btnADBYes.Visible = true;
-                btnDismiss.Visible = true;
-                lblADBWarning.Visible = true;
+                if (File.Exists("C:\\Program Files (x86)\\android-sdk\\platform-tools\\adb.exe"))
+                {
+                    MessageBox.Show("You do not have any compatible devices connected, please connect a device.", "NoLexa");
+                }
+                else
+                {
+                    groupBox1.Visible = true;
+                    btnADBYes.Visible = true;
+                    btnDismiss.Visible = true;
+                    lblADBWarning.Visible = true;
+                }
+
+
             }
 
         }
@@ -62,7 +70,14 @@ namespace NoLexa
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // todo: selection code.
+            AdbServer server = new AdbServer();
+            var serverStart = server.StartServer(@"C:\Program Files (x86)\android-sdk\platform-tools\adb.exe", restartServerIfNewer: false);
+
+            AdbClient Client = new AdbClient();
+            // var device = Client.GetDevices().First();
+
+            frmMain main = new frmMain();
+            main.ShowDialog();
         }
     }
 }
