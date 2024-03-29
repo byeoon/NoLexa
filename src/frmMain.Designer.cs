@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            button1 = new Button();
             button2 = new Button();
+            button1 = new Button();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -53,35 +53,23 @@
             panel1.Size = new Size(805, 69);
             panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // button2
             // 
-            pictureBox1.Image = Properties.Resources.NoLexa_large_1_;
-            pictureBox1.Location = new Point(12, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(133, 49);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            button2.Location = new Point(700, 39);
+            button2.Name = "button2";
+            button2.Size = new Size(80, 23);
+            button2.TabIndex = 4;
+            button2.Text = "ADB Shell";
+            button2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // button1
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(151, 3);
-            label1.Name = "label1";
-            label1.Size = new Size(85, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Serial Number:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(151, 18);
-            label2.Name = "label2";
-            label2.Size = new Size(106, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Device Codename:";
+            button1.Location = new Point(700, 10);
+            button1.Name = "button1";
+            button1.Size = new Size(80, 23);
+            button1.TabIndex = 1;
+            button1.Text = "Settings";
+            button1.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -93,23 +81,35 @@
             label3.TabIndex = 3;
             label3.Text = "Model:";
             // 
-            // button1
+            // label2
             // 
-            button1.Location = new Point(700, 10);
-            button1.Name = "button1";
-            button1.Size = new Size(80, 23);
-            button1.TabIndex = 1;
-            button1.Text = "Settings";
-            button1.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(151, 18);
+            label2.Name = "label2";
+            label2.Size = new Size(106, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Device Codename:";
             // 
-            // button2
+            // label1
             // 
-            button2.Location = new Point(700, 39);
-            button2.Name = "button2";
-            button2.Size = new Size(80, 23);
-            button2.TabIndex = 4;
-            button2.Text = "ADB Shell";
-            button2.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(151, 3);
+            label1.Name = "label1";
+            label1.Size = new Size(85, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Serial Number:";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.NoLexa_large_1_;
+            pictureBox1.Location = new Point(12, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(133, 49);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // frmMain
             // 
@@ -120,6 +120,7 @@
             Controls.Add(panel1);
             Name = "frmMain";
             Text = "NoLexa";
+            Load += frmMain_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

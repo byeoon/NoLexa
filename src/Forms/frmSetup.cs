@@ -7,8 +7,12 @@ namespace NoLexa
 {
     public partial class frmSetup : Form
     {
+        public static AdbServer server = new AdbServer();
+        public static AdbClient client = new AdbClient();
         public frmSetup()
         {
+            server.StartServer(@"C:\Program Files (x86)\android-sdk\platform-tools\adb.exe", restartServerIfNewer: false);
+
             InitializeComponent();
             ListDevices();
         }
@@ -70,11 +74,7 @@ namespace NoLexa
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdbServer server = new AdbServer();
-            var serverStart = server.StartServer(@"C:\Program Files (x86)\android-sdk\platform-tools\adb.exe", restartServerIfNewer: false);
-
-            AdbClient Client = new AdbClient();
-            // var device = Client.GetDevices().First();
+            var device = client.GetDevices().First();
 
             frmMain main = new frmMain();
             main.ShowDialog();

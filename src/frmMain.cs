@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharpAdbClient.DeviceCommands;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace NoLexa.src
         public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            label1.Text = "Serial Number: " + frmSetup.client.GetDevices().First().Serial;
+            label2.Text = "Device Codename: " + frmSetup.client.GetDevices().First().Product;
+            label3.Text = "Model: " + frmSetup.client.GetDevices().First().Model;
         }
     }
 }
