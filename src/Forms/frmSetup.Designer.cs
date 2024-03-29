@@ -207,6 +207,7 @@
             ForeColor = Color.White;
             Name = "frmSetup";
             Text = "NoLexa Setup";
+            Load += frmSetup_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

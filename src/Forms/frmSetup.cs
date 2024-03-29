@@ -9,6 +9,7 @@ namespace NoLexa
     {
         public static AdbServer server = new AdbServer();
         public static AdbClient client = new AdbClient();
+
         public frmSetup()
         {
             server.StartServer(@"C:\Program Files (x86)\android-sdk\platform-tools\adb.exe", restartServerIfNewer: false);
@@ -78,6 +79,11 @@ namespace NoLexa
 
             frmMain main = new frmMain();
             main.ShowDialog();
+        }
+
+        private void frmSetup_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

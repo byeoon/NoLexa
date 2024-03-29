@@ -35,8 +35,16 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            groupBox1 = new GroupBox();
+            button4 = new Button();
+            button3 = new Button();
+            groupBox2 = new GroupBox();
+            button6 = new Button();
+            button5 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -61,6 +69,7 @@
             button2.TabIndex = 4;
             button2.Text = "ADB Shell";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -111,12 +120,88 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.FromArgb(23, 23, 23);
+            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(button3);
+            groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.ForeColor = SystemColors.ControlLightLight;
+            groupBox1.Location = new Point(12, 500);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(768, 76);
+            groupBox1.TabIndex = 1;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Tweaks";
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = Color.Black;
+            button4.Location = new Point(149, 24);
+            button4.Name = "button4";
+            button4.Size = new Size(160, 35);
+            button4.TabIndex = 3;
+            button4.Text = "Remove Lockscreen Ads";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.Black;
+            button3.Location = new Point(6, 24);
+            button3.Name = "button3";
+            button3.Size = new Size(127, 35);
+            button3.TabIndex = 2;
+            button3.Text = "Battery Spoofer";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = Color.FromArgb(23, 23, 23);
+            groupBox2.Controls.Add(button5);
+            groupBox2.Controls.Add(button6);
+            groupBox2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox2.ForeColor = SystemColors.ControlLightLight;
+            groupBox2.Location = new Point(407, 396);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(373, 98);
+            groupBox2.TabIndex = 4;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Data Management";
+            // 
+            // button6
+            // 
+            button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button6.ForeColor = Color.Black;
+            button6.Location = new Point(6, 24);
+            button6.Name = "button6";
+            button6.Size = new Size(132, 40);
+            button6.TabIndex = 2;
+            button6.Text = "Backup and Restore";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.ForeColor = Color.Black;
+            button5.Location = new Point(144, 24);
+            button5.Name = "button5";
+            button5.Size = new Size(168, 40);
+            button5.TabIndex = 3;
+            button5.Text = "Dump System Information";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 20);
             ClientSize = new Size(792, 588);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
             Controls.Add(panel1);
             Name = "frmMain";
             Text = "NoLexa";
@@ -124,6 +209,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -136,5 +223,11 @@
         private Label label2;
         private Button button2;
         private Button button1;
+        private GroupBox groupBox1;
+        private Button button3;
+        private Button button4;
+        private GroupBox groupBox2;
+        private Button button5;
+        private Button button6;
     }
 }
