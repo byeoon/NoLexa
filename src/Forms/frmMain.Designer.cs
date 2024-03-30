@@ -39,8 +39,8 @@
             button4 = new Button();
             button3 = new Button();
             groupBox2 = new GroupBox();
-            button6 = new Button();
             button5 = new Button();
+            button6 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -164,23 +164,12 @@
             groupBox2.Controls.Add(button6);
             groupBox2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox2.ForeColor = SystemColors.ControlLightLight;
-            groupBox2.Location = new Point(407, 396);
+            groupBox2.Location = new Point(407, 368);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(373, 98);
+            groupBox2.Size = new Size(373, 126);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Data Management";
-            // 
-            // button6
-            // 
-            button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button6.ForeColor = Color.Black;
-            button6.Location = new Point(6, 24);
-            button6.Name = "button6";
-            button6.Size = new Size(132, 40);
-            button6.TabIndex = 2;
-            button6.Text = "Backup and Restore";
-            button6.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -193,6 +182,17 @@
             button5.Text = "Dump System Information";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button6.ForeColor = Color.Black;
+            button6.Location = new Point(6, 24);
+            button6.Name = "button6";
+            button6.Size = new Size(132, 40);
+            button6.TabIndex = 2;
+            button6.Text = "Backup and Restore";
+            button6.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
