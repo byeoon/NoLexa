@@ -44,5 +44,26 @@ namespace NoLexa.src
         {
             DumpSystemInfo();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            frmPackageManager packageManager = new frmPackageManager();
+            packageManager.Show();
+        }
     }
 }

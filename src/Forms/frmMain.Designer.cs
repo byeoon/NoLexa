@@ -41,10 +41,15 @@
             groupBox2 = new GroupBox();
             button5 = new Button();
             button6 = new Button();
+            groupBox3 = new GroupBox();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -194,16 +199,69 @@
             button6.Text = "Backup and Restore";
             button6.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            groupBox3.BackColor = Color.FromArgb(23, 23, 23);
+            groupBox3.Controls.Add(button9);
+            groupBox3.Controls.Add(button8);
+            groupBox3.Controls.Add(button7);
+            groupBox3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox3.ForeColor = SystemColors.ControlLightLight;
+            groupBox3.Location = new Point(18, 75);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(373, 126);
+            groupBox3.TabIndex = 5;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Package Management";
+            // 
+            // button7
+            // 
+            button7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button7.ForeColor = Color.Black;
+            button7.Location = new Point(183, 24);
+            button7.Name = "button7";
+            button7.Size = new Size(168, 40);
+            button7.TabIndex = 3;
+            button7.Text = "Sideload APKs";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = Color.Black;
+            button8.Location = new Point(9, 24);
+            button8.Name = "button8";
+            button8.Size = new Size(168, 40);
+            button8.TabIndex = 4;
+            button8.Text = "Package Manager";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click_1;
+            // 
+            // button9
+            // 
+            button9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button9.ForeColor = Color.Black;
+            button9.Location = new Point(9, 70);
+            button9.Name = "button9";
+            button9.Size = new Size(168, 40);
+            button9.TabIndex = 5;
+            button9.Text = "Remove Ads";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 20);
             ClientSize = new Size(792, 588);
+            Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Name = "frmMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "NoLexa";
             Load += frmMain_Load;
             panel1.ResumeLayout(false);
@@ -211,6 +269,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -229,5 +288,9 @@
         private GroupBox groupBox2;
         private Button button5;
         private Button button6;
+        private GroupBox groupBox3;
+        private Button button7;
+        private Button button9;
+        private Button button8;
     }
 }
