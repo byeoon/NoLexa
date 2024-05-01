@@ -35,20 +35,21 @@
             // 
             listBox1.BackColor = Color.FromArgb(48, 48, 48);
             listBox1.BorderStyle = BorderStyle.FixedSingle;
+            listBox1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.ForeColor = SystemColors.Window;
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
             listBox1.Location = new Point(12, 49);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(261, 407);
+            listBox1.Size = new Size(233, 405);
             listBox1.TabIndex = 0;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // frmPackageManager
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 20);
-            ClientSize = new Size(702, 522);
+            ClientSize = new Size(776, 522);
             Controls.Add(listBox1);
             Name = "frmPackageManager";
             Text = "Package Manager";

@@ -42,14 +42,19 @@
             button5 = new Button();
             button6 = new Button();
             groupBox3 = new GroupBox();
-            button7 = new Button();
-            button8 = new Button();
             button9 = new Button();
+            button8 = new Button();
+            button7 = new Button();
+            groupBox4 = new GroupBox();
+            button10 = new Button();
+            button11 = new Button();
+            button13 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -207,36 +212,12 @@
             groupBox3.Controls.Add(button7);
             groupBox3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox3.ForeColor = SystemColors.ControlLightLight;
-            groupBox3.Location = new Point(18, 75);
+            groupBox3.Location = new Point(407, 75);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(373, 126);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
             groupBox3.Text = "Package Management";
-            // 
-            // button7
-            // 
-            button7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button7.ForeColor = Color.Black;
-            button7.Location = new Point(183, 24);
-            button7.Name = "button7";
-            button7.Size = new Size(168, 40);
-            button7.TabIndex = 3;
-            button7.Text = "Sideload APKs";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
-            // 
-            // button8
-            // 
-            button8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.ForeColor = Color.Black;
-            button8.Location = new Point(9, 24);
-            button8.Name = "button8";
-            button8.Size = new Size(168, 40);
-            button8.TabIndex = 4;
-            button8.Text = "Package Manager";
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click_1;
             // 
             // button9
             // 
@@ -250,12 +231,87 @@
             button9.UseVisualStyleBackColor = true;
             button9.Click += button9_Click;
             // 
+            // button8
+            // 
+            button8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = Color.Black;
+            button8.Location = new Point(9, 24);
+            button8.Name = "button8";
+            button8.Size = new Size(168, 40);
+            button8.TabIndex = 4;
+            button8.Text = "Package Manager";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click_1;
+            // 
+            // button7
+            // 
+            button7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button7.ForeColor = Color.Black;
+            button7.Location = new Point(183, 24);
+            button7.Name = "button7";
+            button7.Size = new Size(168, 40);
+            button7.TabIndex = 3;
+            button7.Text = "Sideload APKs";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // groupBox4
+            // 
+            groupBox4.BackColor = Color.FromArgb(23, 23, 23);
+            groupBox4.Controls.Add(button13);
+            groupBox4.Controls.Add(button10);
+            groupBox4.Controls.Add(button11);
+            groupBox4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox4.ForeColor = SystemColors.ControlLightLight;
+            groupBox4.Location = new Point(12, 75);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(373, 126);
+            groupBox4.TabIndex = 6;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Core Tools";
+            // 
+            // button10
+            // 
+            button10.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button10.ForeColor = Color.Black;
+            button10.Location = new Point(9, 70);
+            button10.Name = "button10";
+            button10.Size = new Size(168, 40);
+            button10.TabIndex = 5;
+            button10.Text = "Remove Ads";
+            button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            button11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button11.ForeColor = Color.Black;
+            button11.Location = new Point(9, 24);
+            button11.Name = "button11";
+            button11.Size = new Size(168, 40);
+            button11.TabIndex = 4;
+            button11.Text = "Uninstall Alexa";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // button13
+            // 
+            button13.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button13.ForeColor = Color.Black;
+            button13.Location = new Point(183, 70);
+            button13.Name = "button13";
+            button13.Size = new Size(168, 40);
+            button13.TabIndex = 6;
+            button13.Text = "Remove Bloatware";
+            button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 20);
             ClientSize = new Size(792, 588);
+            Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -270,6 +326,7 @@
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -292,5 +349,9 @@
         private Button button7;
         private Button button9;
         private Button button8;
+        private GroupBox groupBox4;
+        private Button button10;
+        private Button button11;
+        private Button button13;
     }
 }

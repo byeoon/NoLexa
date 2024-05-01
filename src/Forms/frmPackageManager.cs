@@ -28,5 +28,10 @@ namespace NoLexa.src.Forms
             Client.ExecuteShellCommand(device, "sh -c 'cmd package list packages -f'", receiver);
             listBox1.Items.Add(receiver.ToString());
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
